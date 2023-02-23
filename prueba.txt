@@ -1,0 +1,51 @@
+PRUEBA TÉCNICA
+
+
+Crear  un proyecto web usando los siguientes lenguajes  y/o  tecnologías propuestos  para su construcción:
+
+- PHP.
+-Javascritp.
+-JQuery.
+-Html.
+-Bootstrap.
+-MariaDB/MySQL
+-Laravel.
+-Symfony.
+
+Requerimientos del proyecto
+
+1 . Realizar petición HTTP a la URL: https://jsonplaceholder.typicode.com/users el cual retorna un array de usuarios en formato JSON. Se debe mostrar en una Datatable el name, username, email, city, phone, name -> company. 
+
+La información se debe mostrar ordenada alfabéticamente por el name.
+
+Ejemplo de un usuario retornado por la API:
+ 
+ {
+ "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+
+2.  Implementar desde la Datatable una funcionalidad que permita seleccionar un usuario y guardar su información en la base de datos(Crear base de datos y las tablas donde debe guardar la información).
+
+
+3.  Realizar una interfaz donde se liste la información de los usuarios almacenados en la base de datos y dos columnas adicionales que corresponderan a la fecha de nacimiento del usuario y su  foto, las cuales se podrán agregar desde esta misma interfaz.
+
+
