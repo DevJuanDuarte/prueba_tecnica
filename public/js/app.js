@@ -1,19 +1,29 @@
 // import './bootstrap';
 
-let url = 'https://jsonplaceholder.typicode.com/users'
+fetch('https://jsonplaceholder.typicode.com/users')
+      // Analizar la respuesta como JSON
+      .then(response => response.json())
+      // Ordenar los usuarios por el campo "name"
+      .then(data => data.sort((a, b) => a.name.localeCompare(b.name)))
+      // Crear la tabla dinámicamente utilizando el plugin DataTables
+      .then(data => {
+        // Seleccionar la tabla por su ID y aplicar el plugin DataTables
+        $('#usuarios').DataTable({
+          // Especificar las columnas de la tabla y las propiedades del objeto JSON correspondientes
+          columns: [
+            { data: 'name', title: 'Nombre' },
+            { data: 'username', title: 'Usuario' },
+            { data: 'email', title: 'Correo electrónico' },
+            { data: 'address.city', title: 'Ciudad' },
+            { data: 'phone', title: 'Teléfono' },
+            { data: 'company.name', title: 'Empresa' }
+          ],
+          // Especificar los datos a mostrar en la tabla
+          data: data,
 
-fetch(url)
-    .then(response => response.json())
-    .then(data => data.sort((a, b) => a.name.localeCompare(b.name)))
-    .then(data => mostrarData(data))
-    .catch(error => console.log(error))
+          pageLength: 5,
 
-const mostrarData = (data) => {
-    console.log(data)
-    let body = ''
-    for (let i = 0; i < data.length; i++) {
-        body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td><td>${data[i].address.city}</td><td>${data[i].phone}</td><td>${data[i].company.name}</td></tr>`
-        body.sort
-    }
-    document.getElementById('data').innerHTML = body
-}
+          lengthMenu: [5, 10, 25, 50]
+        });
+      });
+  

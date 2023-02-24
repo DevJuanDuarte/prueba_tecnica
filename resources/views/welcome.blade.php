@@ -6,9 +6,9 @@
                 <a class="btn btn-success mb-3" href="{{ route('users.index') }}">Usuarios BD</a>
             </div>
         </div>
-        <div class="container shadow-lg p3 mb-5 bg-body rounded">
-            <table id="usuarios" class="display table table-bordered table-striped table-dark text-center">
-                <thead class="tablesilla table-info">
+        <div class="container  shadow-lg p3  bg-body rounded">
+            <table id="usuarios" class="display table table-bordered table-striped text-center pt-3">
+                <thead class="tablesilla table table-info mt-5">
                     <tr>
                         <th>Name</th>
                         <th>Username</th>
@@ -19,7 +19,7 @@
                     </tr>
                 </thead>
                 <tbody id="data">
-
+    
                 </tbody>
             </table>
         </div>
