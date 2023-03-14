@@ -45,7 +45,7 @@
     <div class="container">
         <div class="d-flex justify-content-end">
             <div class="">
-                <a class="btn btn-danger mt-3" href="/">Usuarios Json</a>
+                <a class="btn btn-danger mt-3" href="/usersjson">Usuarios Json</a>
             </div>
         </div>
     </div>

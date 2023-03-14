@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <a class="btn btn-success mb-3" href="{{ route('users.index') }}">Usuarios BD</a>
+                <a class="btn btn-success mb-3" href="/">Usuarios BD</a>
             </div>
         </div>
         <div class="container  shadow-lg p3  bg-body rounded">

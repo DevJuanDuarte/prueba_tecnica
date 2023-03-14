@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/usersjson', function (){
     return view('welcome');
-});
+} );
+
+Route::get('/', [UsuarioController::class, 'index']);
 
 Route::resource('users', UsuarioController::class);
-

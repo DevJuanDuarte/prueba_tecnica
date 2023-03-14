@@ -14,7 +14,7 @@ class UsuarioController extends Controller
     {
         $users = Usuario::all();
         //Se trae todos los datos de la base de datos a la tabla
-        return view('users.index')->with('users', $users);
+        return view('users.index', compact('users'));
     }
 
     /**
